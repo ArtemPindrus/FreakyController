@@ -1,0 +1,1787 @@
+{
+  "RootStateMachine": {
+    "$id": "1",
+    "InitialState": {
+      "$id": "2",
+      "Connection": {
+        "$id": "3",
+        "EventDisplayName": null,
+        "From": {
+          "$id": "4",
+          "IsConnected": true,
+          "Container": {
+            "$ref": "2"
+          },
+          "Anchor": {
+            "X": 826,
+            "Y": -134
+          },
+          "Connections": 1
+        },
+        "To": {
+          "$id": "5",
+          "IsConnected": true,
+          "Container": {
+            "$id": "6",
+            "$type": "StateMachine",
+            "InitialState": null,
+            "Nodes": {
+              "$id": "7",
+              "$values": []
+            },
+            "Connections": {
+              "$id": "8",
+              "$values": []
+            },
+            "Connectors": {
+              "$id": "9",
+              "LeftConnectors": [
+                {
+                  "$id": "10",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                },
+                {
+                  "$id": "11",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                },
+                {
+                  "$id": "12",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                }
+              ],
+              "TopConnectors": [
+                {
+                  "$id": "13",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                },
+                {
+                  "$ref": "5"
+                },
+                {
+                  "$id": "14",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                }
+              ],
+              "RightConnectors": [
+                {
+                  "$id": "15",
+                  "IsConnected": true,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 896,
+                    "Y": -84
+                  },
+                  "Connections": 1
+                },
+                {
+                  "$id": "16",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                },
+                {
+                  "$id": "17",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                }
+              ],
+              "BottomConnectors": [
+                {
+                  "$id": "18",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                },
+                {
+                  "$id": "19",
+                  "IsConnected": true,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 826,
+                    "Y": -64
+                  },
+                  "Connections": 1
+                },
+                {
+                  "$id": "20",
+                  "IsConnected": false,
+                  "Container": {
+                    "$ref": "6"
+                  },
+                  "Anchor": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "Connections": 0
+                }
+              ]
+            },
+            "IsExpanded": false,
+            "DesiredSize": {
+              "IsEmpty": false,
+              "Width": 0,
+              "Height": 0
+            },
+            "IsVisible": false,
+            "Name": "Standing",
+            "Location": {
+              "X": 750,
+              "Y": -90
+            },
+            "Size": {
+              "IsEmpty": false,
+              "Width": 0,
+              "Height": 0
+            },
+            "Container": {
+              "$ref": "1"
+            }
+          },
+          "Anchor": {
+            "X": 826,
+            "Y": -84
+          },
+          "Connections": 1
+        },
+        "Direction": 0,
+        "SourceOrientation": 0,
+        "TargetOrientation": 0,
+        "IsBothWays": false,
+        "ForwardEvent": null,
+        "BackEvent": null,
+        "DesiredSize": {
+          "IsEmpty": false,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": false,
+        "Name": null,
+        "Location": {
+          "X": 0,
+          "Y": 0
+        },
+        "Size": {
+          "IsEmpty": false,
+          "Width": 0,
+          "Height": 0
+        },
+        "Container": {
+          "$ref": "1"
+        }
+      },
+      "Connector": {
+        "$ref": "4"
+      },
+      "DesiredSize": {
+        "IsEmpty": false,
+        "Width": 0,
+        "Height": 0
+      },
+      "IsVisible": false,
+      "Name": "InitialState",
+      "Location": {
+        "X": 810,
+        "Y": -150
+      },
+      "Size": {
+        "IsEmpty": false,
+        "Width": 0,
+        "Height": 0
+      },
+      "Container": {
+        "$ref": "1"
+      }
+    },
+    "Nodes": {
+      "$id": "21",
+      "$values": [
+        {
+          "$ref": "2"
+        },
+        {
+          "$ref": "6"
+        },
+        {
+          "$id": "22",
+          "$type": "StateMachine",
+          "InitialState": {
+            "$id": "23",
+            "Connection": {
+              "$id": "24",
+              "EventDisplayName": null,
+              "From": {
+                "$id": "25",
+                "IsConnected": true,
+                "Container": {
+                  "$ref": "23"
+                },
+                "Anchor": {
+                  "X": 376,
+                  "Y": 76
+                },
+                "Connections": 1
+              },
+              "To": {
+                "$id": "26",
+                "IsConnected": true,
+                "Container": {
+                  "$id": "27",
+                  "$type": "StateMachine",
+                  "InitialState": null,
+                  "Nodes": {
+                    "$id": "28",
+                    "$values": []
+                  },
+                  "Connections": {
+                    "$id": "29",
+                    "$values": []
+                  },
+                  "Connectors": {
+                    "$id": "30",
+                    "LeftConnectors": [
+                      {
+                        "$id": "31",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      },
+                      {
+                        "$id": "32",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      },
+                      {
+                        "$id": "33",
+                        "IsConnected": true,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 306,
+                          "Y": 146
+                        },
+                        "Connections": 1
+                      }
+                    ],
+                    "TopConnectors": [
+                      {
+                        "$id": "34",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      },
+                      {
+                        "$ref": "26"
+                      },
+                      {
+                        "$id": "35",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      }
+                    ],
+                    "RightConnectors": [
+                      {
+                        "$id": "36",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      },
+                      {
+                        "$id": "37",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      },
+                      {
+                        "$id": "38",
+                        "IsConnected": true,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 446,
+                          "Y": 146
+                        },
+                        "Connections": 1
+                      }
+                    ],
+                    "BottomConnectors": [
+                      {
+                        "$id": "39",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      },
+                      {
+                        "$id": "40",
+                        "IsConnected": true,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 376,
+                          "Y": 146
+                        },
+                        "Connections": 1
+                      },
+                      {
+                        "$id": "41",
+                        "IsConnected": false,
+                        "Container": {
+                          "$ref": "27"
+                        },
+                        "Anchor": {
+                          "X": 0,
+                          "Y": 0
+                        },
+                        "Connections": 0
+                      }
+                    ]
+                  },
+                  "IsExpanded": false,
+                  "DesiredSize": {
+                    "IsEmpty": false,
+                    "Width": 150,
+                    "Height": 50
+                  },
+                  "IsVisible": false,
+                  "Name": "IsCrouching",
+                  "Location": {
+                    "X": 300,
+                    "Y": 120
+                  },
+                  "Size": {
+                    "IsEmpty": false,
+                    "Width": 0,
+                    "Height": 0
+                  },
+                  "Container": {
+                    "$ref": "22"
+                  }
+                },
+                "Anchor": {
+                  "X": 376,
+                  "Y": 126
+                },
+                "Connections": 1
+              },
+              "Direction": 0,
+              "SourceOrientation": 0,
+              "TargetOrientation": 0,
+              "IsBothWays": false,
+              "ForwardEvent": null,
+              "BackEvent": null,
+              "DesiredSize": {
+                "IsEmpty": false,
+                "Width": 0,
+                "Height": 0
+              },
+              "IsVisible": false,
+              "Name": null,
+              "Location": {
+                "X": 0,
+                "Y": 0
+              },
+              "Size": {
+                "IsEmpty": false,
+                "Width": 0,
+                "Height": 0
+              },
+              "Container": {
+                "$ref": "22"
+              }
+            },
+            "Connector": {
+              "$ref": "25"
+            },
+            "DesiredSize": {
+              "IsEmpty": false,
+              "Width": 0,
+              "Height": 0
+            },
+            "IsVisible": false,
+            "Name": "InitialState",
+            "Location": {
+              "X": 360,
+              "Y": 60
+            },
+            "Size": {
+              "IsEmpty": false,
+              "Width": 0,
+              "Height": 0
+            },
+            "Container": {
+              "$ref": "22"
+            }
+          },
+          "Nodes": {
+            "$id": "42",
+            "$values": [
+              {
+                "$ref": "27"
+              },
+              {
+                "$id": "43",
+                "$type": "StateMachine",
+                "InitialState": null,
+                "Nodes": {
+                  "$id": "44",
+                  "$values": []
+                },
+                "Connections": {
+                  "$id": "45",
+                  "$values": []
+                },
+                "Connectors": {
+                  "$id": "46",
+                  "LeftConnectors": [
+                    {
+                      "$id": "47",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 306,
+                        "Y": 306
+                      },
+                      "Connections": 1
+                    },
+                    {
+                      "$id": "48",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "49",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "TopConnectors": [
+                    {
+                      "$id": "50",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "51",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 376,
+                        "Y": 306
+                      },
+                      "Connections": 1
+                    },
+                    {
+                      "$id": "52",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "RightConnectors": [
+                    {
+                      "$id": "53",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 446,
+                        "Y": 306
+                      },
+                      "Connections": 1
+                    },
+                    {
+                      "$id": "54",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "55",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "BottomConnectors": [
+                    {
+                      "$id": "56",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "57",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 376,
+                        "Y": 326
+                      },
+                      "Connections": 1
+                    },
+                    {
+                      "$id": "58",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "43"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ]
+                },
+                "IsExpanded": false,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 150,
+                  "Height": 30
+                },
+                "IsVisible": false,
+                "Name": "IsUncrouching",
+                "Location": {
+                  "X": 300,
+                  "Y": 300
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$id": "59",
+                "$type": "StateMachine",
+                "InitialState": null,
+                "Nodes": {
+                  "$id": "60",
+                  "$values": []
+                },
+                "Connections": {
+                  "$id": "61",
+                  "$values": []
+                },
+                "Connectors": {
+                  "$id": "62",
+                  "LeftConnectors": [
+                    {
+                      "$id": "63",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "64",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "65",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "TopConnectors": [
+                    {
+                      "$id": "66",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 476,
+                        "Y": 216
+                      },
+                      "Connections": 1
+                    },
+                    {
+                      "$id": "67",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "68",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "RightConnectors": [
+                    {
+                      "$id": "69",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "70",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "71",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "BottomConnectors": [
+                    {
+                      "$id": "72",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 476,
+                        "Y": 236
+                      },
+                      "Connections": 1
+                    },
+                    {
+                      "$id": "73",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "74",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "59"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ]
+                },
+                "IsExpanded": false,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": "Waiting",
+                "Location": {
+                  "X": 450,
+                  "Y": 210
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$id": "75",
+                "$type": "StateMachine",
+                "InitialState": null,
+                "Nodes": {
+                  "$id": "76",
+                  "$values": []
+                },
+                "Connections": {
+                  "$id": "77",
+                  "$values": []
+                },
+                "Connectors": {
+                  "$id": "78",
+                  "LeftConnectors": [
+                    {
+                      "$id": "79",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "80",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "81",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "TopConnectors": [
+                    {
+                      "$id": "82",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "83",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "84",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 276,
+                        "Y": 216
+                      },
+                      "Connections": 1
+                    }
+                  ],
+                  "RightConnectors": [
+                    {
+                      "$id": "85",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "86",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "87",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    }
+                  ],
+                  "BottomConnectors": [
+                    {
+                      "$id": "88",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "89",
+                      "IsConnected": false,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 0,
+                        "Y": 0
+                      },
+                      "Connections": 0
+                    },
+                    {
+                      "$id": "90",
+                      "IsConnected": true,
+                      "Container": {
+                        "$ref": "75"
+                      },
+                      "Anchor": {
+                        "X": 276,
+                        "Y": 236
+                      },
+                      "Connections": 1
+                    }
+                  ]
+                },
+                "IsExpanded": false,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": "Crouched",
+                "Location": {
+                  "X": 150,
+                  "Y": 210
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$ref": "23"
+              },
+              {
+                "$id": "91",
+                "$type": "ExitNode",
+                "Connector": {
+                  "$id": "92",
+                  "IsConnected": true,
+                  "Container": {
+                    "$ref": "91"
+                  },
+                  "Anchor": {
+                    "X": 381.19499999999994,
+                    "Y": 424.62
+                  },
+                  "Connections": 1
+                },
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": "stand",
+                "Location": {
+                  "X": 345,
+                  "Y": 390
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              }
+            ]
+          },
+          "Connections": {
+            "$id": "93",
+            "$values": [
+              {
+                "$id": "94",
+                "EventDisplayName": "CTRL",
+                "From": {
+                  "$ref": "40"
+                },
+                "To": {
+                  "$ref": "51"
+                },
+                "Direction": 0,
+                "SourceOrientation": 0,
+                "TargetOrientation": 0,
+                "IsBothWays": true,
+                "ForwardEvent": "CTRL",
+                "BackEvent": "CTRL",
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": null,
+                "Location": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$id": "95",
+                "EventDisplayName": "CTRL",
+                "From": {
+                  "$ref": "66"
+                },
+                "To": {
+                  "$ref": "38"
+                },
+                "Direction": 0,
+                "SourceOrientation": 0,
+                "TargetOrientation": 0,
+                "IsBothWays": false,
+                "ForwardEvent": "CTRL",
+                "BackEvent": null,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": null,
+                "Location": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$ref": "24"
+              },
+              {
+                "$id": "96",
+                "EventDisplayName": "TweenFinished",
+                "From": {
+                  "$ref": "57"
+                },
+                "To": {
+                  "$ref": "92"
+                },
+                "Direction": 0,
+                "SourceOrientation": 0,
+                "TargetOrientation": 0,
+                "IsBothWays": false,
+                "ForwardEvent": "TweenFinished",
+                "BackEvent": null,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": null,
+                "Location": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$id": "97",
+                "EventDisplayName": "TweenFinished",
+                "From": {
+                  "$ref": "33"
+                },
+                "To": {
+                  "$ref": "84"
+                },
+                "Direction": 0,
+                "SourceOrientation": 0,
+                "TargetOrientation": 0,
+                "IsBothWays": false,
+                "ForwardEvent": "TweenFinished",
+                "BackEvent": null,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": null,
+                "Location": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$id": "98",
+                "EventDisplayName": "CTRL",
+                "From": {
+                  "$ref": "90"
+                },
+                "To": {
+                  "$ref": "47"
+                },
+                "Direction": 0,
+                "SourceOrientation": 1,
+                "TargetOrientation": 1,
+                "IsBothWays": false,
+                "ForwardEvent": "CTRL",
+                "BackEvent": null,
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": null,
+                "Location": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              },
+              {
+                "$id": "99",
+                "EventDisplayName": "ObstacleIn / ObstacleOut",
+                "From": {
+                  "$ref": "53"
+                },
+                "To": {
+                  "$ref": "72"
+                },
+                "Direction": 0,
+                "SourceOrientation": 0,
+                "TargetOrientation": 0,
+                "IsBothWays": true,
+                "ForwardEvent": "ObstacleIn",
+                "BackEvent": "ObstacleOut",
+                "DesiredSize": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "IsVisible": false,
+                "Name": null,
+                "Location": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Size": {
+                  "IsEmpty": false,
+                  "Width": 0,
+                  "Height": 0
+                },
+                "Container": {
+                  "$ref": "22"
+                }
+              }
+            ]
+          },
+          "Connectors": {
+            "$id": "100",
+            "LeftConnectors": [
+              {
+                "$id": "101",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "102",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "103",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              }
+            ],
+            "TopConnectors": [
+              {
+                "$id": "104",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "105",
+                "IsConnected": true,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 826,
+                  "Y": -24
+                },
+                "Connections": 1
+              },
+              {
+                "$id": "106",
+                "IsConnected": true,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 1076,
+                  "Y": -24
+                },
+                "Connections": 1
+              }
+            ],
+            "RightConnectors": [
+              {
+                "$id": "107",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "108",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "109",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              }
+            ],
+            "BottomConnectors": [
+              {
+                "$id": "110",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "111",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              },
+              {
+                "$id": "112",
+                "IsConnected": false,
+                "Container": {
+                  "$ref": "22"
+                },
+                "Anchor": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Connections": 0
+              }
+            ]
+          },
+          "IsExpanded": true,
+          "DesiredSize": {
+            "IsEmpty": false,
+            "Width": 750,
+            "Height": 480
+          },
+          "IsVisible": false,
+          "Name": "RunningLock",
+          "Location": {
+            "X": 450,
+            "Y": -30
+          },
+          "Size": {
+            "IsEmpty": false,
+            "Width": 750,
+            "Height": 480
+          },
+          "Container": {
+            "$ref": "1"
+          }
+        }
+      ]
+    },
+    "Connections": {
+      "$id": "113",
+      "$values": [
+        {
+          "$ref": "3"
+        },
+        {
+          "$id": "114",
+          "EventDisplayName": "CTRL",
+          "From": {
+            "$ref": "19"
+          },
+          "To": {
+            "$ref": "105"
+          },
+          "Direction": 0,
+          "SourceOrientation": 0,
+          "TargetOrientation": 0,
+          "IsBothWays": false,
+          "ForwardEvent": "CTRL",
+          "BackEvent": null,
+          "DesiredSize": {
+            "IsEmpty": false,
+            "Width": 0,
+            "Height": 0
+          },
+          "IsVisible": false,
+          "Name": null,
+          "Location": {
+            "X": 0,
+            "Y": 0
+          },
+          "Size": {
+            "IsEmpty": false,
+            "Width": 0,
+            "Height": 0
+          },
+          "Container": {
+            "$ref": "1"
+          }
+        },
+        {
+          "$id": "115",
+          "EventDisplayName": "via exit stand",
+          "From": {
+            "$ref": "106"
+          },
+          "To": {
+            "$ref": "15"
+          },
+          "Direction": 0,
+          "SourceOrientation": 0,
+          "TargetOrientation": 0,
+          "IsBothWays": false,
+          "ForwardEvent": "via exit stand",
+          "BackEvent": null,
+          "DesiredSize": {
+            "IsEmpty": false,
+            "Width": 0,
+            "Height": 0
+          },
+          "IsVisible": false,
+          "Name": null,
+          "Location": {
+            "X": 0,
+            "Y": 0
+          },
+          "Size": {
+            "IsEmpty": false,
+            "Width": 0,
+            "Height": 0
+          },
+          "Container": {
+            "$ref": "1"
+          }
+        }
+      ]
+    },
+    "Connectors": {
+      "$id": "116",
+      "LeftConnectors": [
+        {
+          "$id": "117",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "118",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "119",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        }
+      ],
+      "TopConnectors": [
+        {
+          "$id": "120",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "121",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "122",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        }
+      ],
+      "RightConnectors": [
+        {
+          "$id": "123",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "124",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "125",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        }
+      ],
+      "BottomConnectors": [
+        {
+          "$id": "126",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "127",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        },
+        {
+          "$id": "128",
+          "IsConnected": false,
+          "Container": {
+            "$ref": "1"
+          },
+          "Anchor": {
+            "X": 0,
+            "Y": 0
+          },
+          "Connections": 0
+        }
+      ]
+    },
+    "IsExpanded": true,
+    "DesiredSize": {
+      "IsEmpty": false,
+      "Width": 0,
+      "Height": 0
+    },
+    "IsVisible": false,
+    "Name": "ROOT",
+    "Location": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "IsEmpty": false,
+      "Width": 0,
+      "Height": 0
+    },
+    "Container": null
+  },
+  "Options": {
+    "$id": "129",
+    "ClassName": "CrouchingStateMachine",
+    "NamespaceName": "FirstPersonController"
+  }
+}
