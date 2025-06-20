@@ -14,6 +14,6 @@ public class FreakyController : GameModule
         // To learn more see scripting documentation.
         BuildNativeCode = false;
 
-        options.PublicDependencies.Add("KCC");
+        options.PrivateDependencies.Add("KCC");
     }
 }
