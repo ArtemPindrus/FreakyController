@@ -1,0 +1,214 @@
+{
+	"ID": "29906ed74d363792f574f7ae263f74bd",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6705,
+	"Data": [
+	{
+		"ID": "7d38057e46ef8246e091a8920d614dcc",
+		"TypeName": "KCC.KinematicCharacterController",
+		"V": {
+	"ColliderHeight": 140.0,
+	"ColliderRadius": 35.0,
+	"CollisionMask": {
+		"Mask": 5
+	},
+	"RigidBodyInteractionMode": 1,
+	"SimulatedMass": 70.0
+},
+		"Name": "Player",
+		"StaticFlags": 0,
+		"Layer": 1
+	},
+	{
+		"ID": "03a60a424b3f5969002598911d13a89b",
+		"TypeName": "DragAndSmash.Dragger",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"V": {
+	"rayCaster": "bede27d140890e599ce5719d4ef5e157",
+	"pickUpEvent": {
+		"Name": "PickUp"
+	},
+	"LookAround": "137d2a274af47ba79d30949f8caf2ec6",
+	"MaxViewAngle": 20.0,
+	"MaxDistance": 200.0,
+	"Force": 1000.0
+}
+	},
+	{
+		"ID": "8579fd384d3979c5c28b0cb858259c97",
+		"TypeName": "FreakyController.Controller",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"V": {
+	"run": {
+		"Name": "Run"
+	},
+	"MaxSpeed": 3.0,
+	"Acceleration": 30.0,
+	"RunMultiplier": 1.5
+}
+	},
+	{
+		"ID": "137d2a274af47ba79d30949f8caf2ec6",
+		"TypeName": "FreakyController.LookAround",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"V": {
+	"lockCursor": true,
+	"Sensitivity": 0.1,
+	"VerticalLimit": 70.0,
+	"neck": "6f1fcff2407d5c8d34574a935709c772",
+	"body": "8579fd384d3979c5c28b0cb858259c97",
+	"Camera": "b25411314306df99875cc08e54867f72"
+}
+	},
+	{
+		"ID": "8b80d8d34d7879540093f7b0331b0417",
+		"TypeName": "FreakyController.Crouching",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"V": {
+	"controller": "8579fd384d3979c5c28b0cb858259c97",
+	"obstacleChecker": "7805682a44f323adb831c5884ca2ad11",
+	"crouchEvent": {
+		"Name": "Crouch"
+	},
+	"CrouchedMultiplier": 0.25,
+	"CrouchDuration": 0.4
+}
+	},
+	{
+		"ID": "6f1fcff2407d5c8d34574a935709c772",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"Name": "Neck",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 68.41072082519531,
+				"Z": 0.0
+			}
+		},
+		"StaticFlags": 0,
+		"Layer": 1
+	},
+	{
+		"ID": "13e25a6f44717bcfb7cb6181653d9e8a",
+		"TypeName": "FreakyController.PreserveDisplacement",
+		"ParentID": "6f1fcff2407d5c8d34574a935709c772",
+		"V": {
+	"controller": "8579fd384d3979c5c28b0cb858259c97"
+}
+	},
+	{
+		"ID": "b25411314306df99875cc08e54867f72",
+		"TypeName": "FlaxEngine.Camera",
+		"ParentID": "6f1fcff2407d5c8d34574a935709c772",
+		"Name": "Camera",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 16.485504150390625,
+				"Z": 0.0
+			}
+		},
+		"StaticFlags": 0,
+		"Layer": 1,
+		"Near": 6.0
+	},
+	{
+		"ID": "170205b5481340b11fa3ffb8def2e8f0",
+		"TypeName": "FlaxEngine.AudioListener",
+		"ParentID": "b25411314306df99875cc08e54867f72",
+		"Name": "Audio Listener",
+		"StaticFlags": 0,
+		"Layer": 1
+	},
+	{
+		"ID": "98e7e27a44325953c48464b215a6a845",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "b25411314306df99875cc08e54867f72",
+		"Name": "Raycaster",
+		"StaticFlags": 0,
+		"Layer": 1
+	},
+	{
+		"ID": "bede27d140890e599ce5719d4ef5e157",
+		"TypeName": "DragAndSmash.RayCaster",
+		"ParentID": "98e7e27a44325953c48464b215a6a845",
+		"V": {
+	"debug": true,
+	"direction": {
+		"X": 0.0,
+		"Y": 0.0,
+		"Z": 1.0
+	},
+	"maxDistance": 150.0,
+	"layers": {
+		"Mask": 1
+	}
+}
+	},
+	{
+		"ID": "638e1e544feb7639e583869be04cf1f6",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"Name": "StaticModel",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -100.0,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 1.0,
+				"Y": 2.0,
+				"Z": 1.0
+			}
+		},
+		"StaticFlags": 0,
+		"Layer": 1,
+		"Model": "3f82e57744f57c28285150b646ad2198",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 0,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "090f1cf24377fa180e2254a14b13d480",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
+		"Name": "ObstacleChecker",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 73.0,
+				"Z": 0.0
+			}
+		},
+		"StaticFlags": 0
+	},
+	{
+		"ID": "7805682a44f323adb831c5884ca2ad11",
+		"TypeName": "FreakyController.SphereChecker",
+		"ParentID": "090f1cf24377fa180e2254a14b13d480",
+		"V": {
+	"radius": 35.0,
+	"hitMask": {
+		"Mask": 5
+	}
+}
+	},
+	{
+		"ID": "4a6bd47c4e3ff4e93e826192ef9af145",
+		"TypeName": "FreakyController.PreserveDisplacement",
+		"ParentID": "090f1cf24377fa180e2254a14b13d480",
+		"V": {
+	"controller": "8579fd384d3979c5c28b0cb858259c97"
+}
+	}
+]
+}
