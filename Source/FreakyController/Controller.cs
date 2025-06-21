@@ -17,6 +17,10 @@ public class Controller : Script, IKinematicCharacter
     private InputAxis movementRight = new("MovementRight");
     private Locker runningLocker = new();
 
+    [Serialize]
+    [ShowInEditor]
+    private bool applyGravity;
+
     /// <summary>
     /// Horizontal velocity of controller. Influenced by the player.
     /// </summary>
@@ -140,6 +144,8 @@ public class Controller : Script, IKinematicCharacter
 
     private void ApplyGravity()
     {
+        if (!applyGravity) return;
+
         if (GroundingState != GroundState.Grounded)
         {
             gravityVelocity += Physics.Gravity / 100 * Time.DeltaTime;

@@ -37,4 +37,18 @@ public struct CenterAndRange
             lookAround.SetForward(targetForward, out _);
         }
     }
+
+    public static Vector3 Update(Vector3 toTarget, Vector3 forward, float maxAngle) {
+        var angle = Vector3.Angle(toTarget, forward);
+
+        if (angle > maxAngle) {
+            Vector3 cross = Vector3.Cross(toTarget, forward);
+            var rot = Quaternion.RotationAxis(cross, maxAngle * Mathf.DegreesToRadians);
+
+            Vector3 targetForward = toTarget * rot;
+            return targetForward;
+        }
+
+        return forward;
+    }
 }
