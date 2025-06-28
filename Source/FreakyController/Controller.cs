@@ -15,18 +15,28 @@ public class Controller : Script, IKinematicCharacter
     private KinematicCharacterController controller;
     private InputAxis movementForward = new("MovementForward");
     private InputAxis movementRight = new("MovementRight");
+
     private Locker runningLocker = new();
+    private Locker movementLocker = new();
 
     [Serialize]
     [ShowInEditor]
     private bool applyGravity;
 
+    public Vector2 LocalMovementVelocity2D { 
+        get {
+            var tran = Transform.WorldToLocal(Actor.Position + MovementVelocity);
+
+            return new(tran.X, tran.Z);
+        }    
+    }
+
     /// <summary>
-    /// Horizontal velocity of controller. Influenced by the player.
+    /// Horizontal world velocity of controller. Influenced by the player.
     /// </summary>
     [ShowInEditor]
     [ReadOnly]
-    private Vector3 movementVelocity;
+    public Vector3 MovementVelocity { get; private set; }
 
     [ReadOnly]
     [ShowInEditor]
@@ -59,10 +69,6 @@ public class Controller : Script, IKinematicCharacter
         get => controller.ColliderHeight; set => controller.ColliderHeight = value;
     }
 
-    [ShowInEditor]
-    [ReadOnly]
-    public GroundState GroundingState { get; private set; }
-
     public void Rotate(Quaternion rotation)
     {
         Quaternion newRot = Quaternion.Add(controller.TransientOrientation, rotation);
@@ -86,6 +92,14 @@ public class Controller : Script, IKinematicCharacter
 
     public void LockRunning(object @lock, bool toLock) => runningLocker.Lock(@lock, toLock);
 
+    public void LockMovement(object @lock, bool toLock) => movementLocker.Lock(@lock, toLock);
+
+    public void AddWorldAcceleration(Vector3 acceleration) {
+        Vector3 delta = acceleration * Time.DeltaTime;
+
+        MovementVelocity += delta; // Not right
+    }
+
     public override void OnAwake()
     {
         controller = Actor.As<KinematicCharacterController>();
@@ -97,12 +111,12 @@ public class Controller : Script, IKinematicCharacter
     {
         Accelerate();
         ApplyGravity();
-        velocity = movementVelocity + gravityVelocity;
+        velocity = MovementVelocity + gravityVelocity;
 
         orientation = Quaternion.Identity;
     }
 
-    public Vector3 KinematicGroundProjection(Vector3 velocity, Vector3 gravityEulerNormalized) =>
+    public Vector3 KinematicGroundProjection(Vector3 velocity, Vector3 gravityEulerNormalized) => 
         controller.GroundTangent(velocity.Normalized) * velocity.Length; // TODO: learn
 
     public bool KinematicCollisionValid(Collider other) => true;
@@ -113,7 +127,6 @@ public class Controller : Script, IKinematicCharacter
 
     public void KinematicGroundingEvent(GroundState groundingState, RayCastHit? hit)
     {
-        GroundingState = groundingState;
     }
 
     public bool KinematicCanAttachToRigidBody(RigidBody rigidBody) => false; // TODO: learn
@@ -130,8 +143,11 @@ public class Controller : Script, IKinematicCharacter
     private void Accelerate()
     {
         Vector3 inputDirection = GetInputDirection();
+
+        if (movementLocker.IsLocked) inputDirection = Vector3.Zero;
+
         Vector3 targetVelocity = inputDirection * GetTargetSpeed();
-        Vector3 velocityDelta = targetVelocity - movementVelocity;
+        Vector3 velocityDelta = targetVelocity - MovementVelocity;
 
         float magnitudeDelta = Acceleration * Time.DeltaTime;
         if (velocityDelta.Length > magnitudeDelta)
@@ -139,14 +155,14 @@ public class Controller : Script, IKinematicCharacter
             velocityDelta = velocityDelta.Normalized * magnitudeDelta;
         }
 
-        movementVelocity += velocityDelta;
+        MovementVelocity += velocityDelta;
     }
 
     private void ApplyGravity()
     {
         if (!applyGravity) return;
 
-        if (GroundingState != GroundState.Grounded)
+        if (!controller.IsGrounded)
         {
             gravityVelocity += Physics.Gravity / 100 * Time.DeltaTime;
         }
@@ -171,6 +187,6 @@ public class Controller : Script, IKinematicCharacter
             targetSpeed *= RunMultiplier;
         }
 
-        return targetSpeed;
+        return targetSpeed * Time.TimeScale;
     }
 }

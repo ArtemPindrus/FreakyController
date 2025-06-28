@@ -11,7 +11,7 @@ public struct SinTween
 {
     public event Action? Finished;
 
-    public bool Reversed;
+    public bool Reversed { get; private set; }
 
     public float Time { get; private set; }
     public float Duration { get; private set; }
