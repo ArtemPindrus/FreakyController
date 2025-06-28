@@ -184,7 +184,9 @@
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "137d2a274af47ba79d30949f8caf2ec6",
 			"ParentID": "f5742355455d0fbba7f4b59e3c9f6479",
-			"V": {}
+			"V": {
+	"keepLockingCursor": true
+}
 		},
 		{
 			"ID": "005217a7499a53387936afb63fa76e5b",
@@ -270,61 +272,29 @@
 			"V": {}
 		},
 		{
-			"ID": "dff459644f4fa61995cfe39c05a434cc",
-			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
-			"PrefabObjectID": "f68cd6ab4ed428c3b0c213ba914443ce",
+			"ID": "3967c8a040bc28565c44c4a99388432c",
+			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
-			"Name": "ConsolePrefab",
+			"Name": "TESTING"
+		},
+		{
+			"ID": "05ce3cf44238fa1a54d4f49913302d2d",
+			"TypeName": "Game.Test",
+			"ParentID": "3967c8a040bc28565c44c4a99388432c",
 			"V": {}
 		},
 		{
-			"ID": "7ec9dcf64051a9f0e39b7f82f1a4d0ce",
-			"TypeName": "FlaxConsole.DefaultConsole",
-			"ParentID": "dff459644f4fa61995cfe39c05a434cc",
-			"V": {
-	"SwitchEvent": {
-		"Name": "SwitchConsole"
-	},
-	"ExecuteEvent": {
-		"Name": "ExecuteConsoleCommand"
-	},
-	"textBox": "d0fcceab4318bc8133e3638aa78e9f82",
-	"text": "697193724898d9648a5906957e617703"
-}
+			"ID": "c74fe9934758c0cf77aa8692b74856ca",
+			"TypeName": "FlaxConsole.ConsoleObject",
+			"ParentID": "3967c8a040bc28565c44c4a99388432c",
+			"V": {}
 		},
 		{
-			"ID": "83e7fc4c409065ac9aba199b43a25a68",
-			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
-			"PrefabObjectID": "72eaff454e4b79872258feb8cae490b9",
-			"ParentID": "dff459644f4fa61995cfe39c05a434cc",
-			"Data": {
-	"ResolutionCurve": {},
-	"DpiCurve": {}
-}
-		},
-		{
-			"ID": "8cf988924c3bdb5faa9bbe85fd4bb893",
-			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
-			"PrefabObjectID": "5904c07c4ddac258aeac76ab4b5fdb5b",
-			"ParentID": "83e7fc4c409065ac9aba199b43a25a68",
-			"Data": {}
-		},
-		{
-			"ID": "d0fcceab4318bc8133e3638aa78e9f82",
-			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
-			"PrefabObjectID": "dd1a17154413935f218ec5921c7829aa",
-			"ParentID": "8cf988924c3bdb5faa9bbe85fd4bb893",
-			"Data": {}
-		},
-		{
-			"ID": "697193724898d9648a5906957e617703",
-			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
-			"PrefabObjectID": "5d3b73d547ad3e12e2c51fb39a5cdfa3",
-			"ParentID": "8cf988924c3bdb5faa9bbe85fd4bb893",
-			"Data": {
-	"IsReadOnly": false,
-	"IsSelectable": false
-}
+			"ID": "75565f734e81a1c562e0c49e4a6888c9",
+			"TypeName": "FlaxEngine.AudioSource",
+			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
+			"Name": "AudioSource",
+			"Clip": "0ee989d64efbb13d779ae486a3f2b4b5"
 		}
 	]
 }
