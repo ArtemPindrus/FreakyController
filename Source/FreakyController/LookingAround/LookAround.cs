@@ -9,13 +9,14 @@ namespace FreakyController;
 /// </summary>
 public class LookAround : Script
 {
-    public bool lockCursor;
-    public float Sensitivity;
-    public float VerticalLimit;
+    [Serialize]
+    [ShowInEditor]
+    private bool keepLockingCursor;
 
     [Serialize]
     [ShowInEditor]
     private Actor neck;
+
     [Serialize]
     [ShowInEditor]
     private Controller body;
@@ -26,6 +27,14 @@ public class LookAround : Script
     private InputAxis HorizontalAxis = new InputAxis("Horizontal");
     private CenterAndRange centerAndRange;
     private Locker inputResponseLocker;
+
+    [Serialize]
+    [ShowInEditor]
+    public float Sensitivity { get; private set; }
+
+    [Serialize]
+    [ShowInEditor]
+    public float VerticalLimit { get; private set; }
 
     [Serialize]
     [ShowInEditor]
@@ -94,16 +103,15 @@ public class LookAround : Script
     {
         centerAndRange = new(Camera, this);
         inputResponseLocker = new();
-
-        if (lockCursor)
-        {
-            Screen.CursorLock = CursorLockMode.Locked;
-            Screen.CursorVisible = false;
-        }
     }
 
     public override void OnUpdate()
     {
+        if (keepLockingCursor) {
+            Screen.CursorLock = CursorLockMode.Locked;
+            Screen.CursorVisible = false;
+        }
+
         ApplyTargetAngles();
         centerAndRange.Update();
         ApplyTargetAngles();
@@ -133,7 +141,7 @@ public class LookAround : Script
     #region Event Handlers
     private void OnVerticalChanged()
     {
-        float delta = VerticalAxis.Value * Sensitivity;
+        float delta = VerticalAxis.Value * Sensitivity * Time.TimeScale;
 
         LastInputVerticalDelta = delta;
         if (inputResponseLocker.IsLocked) return;
@@ -143,7 +151,7 @@ public class LookAround : Script
 
     private void OnHorizontalChanged()
     {
-        float delta = HorizontalAxis.Value * Sensitivity;
+        float delta = HorizontalAxis.Value * Sensitivity * Time.TimeScale;
 
         LastInputHorizontalDelta = delta;
 

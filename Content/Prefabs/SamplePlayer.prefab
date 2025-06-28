@@ -20,21 +20,6 @@
 		"Layer": 1
 	},
 	{
-		"ID": "03a60a424b3f5969002598911d13a89b",
-		"TypeName": "DragAndSmash.Dragger",
-		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
-		"V": {
-	"rayCaster": "bede27d140890e599ce5719d4ef5e157",
-	"pickUpEvent": {
-		"Name": "PickUp"
-	},
-	"LookAround": "137d2a274af47ba79d30949f8caf2ec6",
-	"MaxViewAngle": 20.0,
-	"MaxDistance": 200.0,
-	"Force": 1000.0
-}
-	},
-	{
 		"ID": "8579fd384d3979c5c28b0cb858259c97",
 		"TypeName": "FreakyController.Controller",
 		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
@@ -42,6 +27,7 @@
 	"run": {
 		"Name": "Run"
 	},
+	"applyGravity": true,
 	"MaxSpeed": 3.0,
 	"Acceleration": 30.0,
 	"RunMultiplier": 1.5
@@ -52,11 +38,10 @@
 		"TypeName": "FreakyController.LookAround",
 		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
 		"V": {
-	"lockCursor": true,
-	"Sensitivity": 0.1,
-	"VerticalLimit": 70.0,
 	"neck": "6f1fcff2407d5c8d34574a935709c772",
 	"body": "8579fd384d3979c5c28b0cb858259c97",
+	"Sensitivity": 0.1,
+	"VerticalLimit": 70.0,
 	"Camera": "b25411314306df99875cc08e54867f72"
 }
 	},
@@ -98,6 +83,14 @@
 }
 	},
 	{
+		"ID": "9a56e7774d9f26451474e3a571653df4",
+		"TypeName": "FreakyController.PreserveDisplacement",
+		"ParentID": "6f1fcff2407d5c8d34574a935709c772",
+		"V": {
+	"controller": "8579fd384d3979c5c28b0cb858259c97"
+}
+	},
+	{
 		"ID": "b25411314306df99875cc08e54867f72",
 		"TypeName": "FlaxEngine.Camera",
 		"ParentID": "6f1fcff2407d5c8d34574a935709c772",
@@ -128,23 +121,6 @@
 		"Name": "Raycaster",
 		"StaticFlags": 0,
 		"Layer": 1
-	},
-	{
-		"ID": "bede27d140890e599ce5719d4ef5e157",
-		"TypeName": "DragAndSmash.RayCaster",
-		"ParentID": "98e7e27a44325953c48464b215a6a845",
-		"V": {
-	"debug": true,
-	"direction": {
-		"X": 0.0,
-		"Y": 0.0,
-		"Z": 1.0
-	},
-	"maxDistance": 150.0,
-	"layers": {
-		"Mask": 1
-	}
-}
 	},
 	{
 		"ID": "638e1e544feb7639e583869be04cf1f6",
@@ -204,6 +180,14 @@
 	},
 	{
 		"ID": "4a6bd47c4e3ff4e93e826192ef9af145",
+		"TypeName": "FreakyController.PreserveDisplacement",
+		"ParentID": "090f1cf24377fa180e2254a14b13d480",
+		"V": {
+	"controller": "8579fd384d3979c5c28b0cb858259c97"
+}
+	},
+	{
+		"ID": "b93160154333f67967ec3f8c2cdb4c0b",
 		"TypeName": "FreakyController.PreserveDisplacement",
 		"ParentID": "090f1cf24377fa180e2254a14b13d480",
 		"V": {

@@ -173,13 +173,6 @@
 			}
 		},
 		{
-			"ID": "8bbd5cef4771eb60b1143aa941959c1a",
-			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
-			"PrefabObjectID": "03a60a424b3f5969002598911d13a89b",
-			"ParentID": "f5742355455d0fbba7f4b59e3c9f6479",
-			"V": {}
-		},
-		{
 			"ID": "c8d533b542deee441400cd8677294041",
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "8579fd384d3979c5c28b0cb858259c97",
@@ -215,11 +208,10 @@
 		},
 		{
 			"ID": "78b2d8554d9963a3b03de69133a426c0",
-			"TypeName": "FreakyController.PreserveDisplacement",
+			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
+			"PrefabObjectID": "9a56e7774d9f26451474e3a571653df4",
 			"ParentID": "031a5dd64f3357fdf25802aa472e1804",
-			"V": {
-	"controller": "c8d533b542deee441400cd8677294041"
-}
+			"V": {}
 		},
 		{
 			"ID": "978ddb2c466217d10c1a73a8e6352a44",
@@ -238,13 +230,6 @@
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "98e7e27a44325953c48464b215a6a845",
 			"ParentID": "978ddb2c466217d10c1a73a8e6352a44"
-		},
-		{
-			"ID": "2b238c9342be9939ac6d18a579526a97",
-			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
-			"PrefabObjectID": "bede27d140890e599ce5719d4ef5e157",
-			"ParentID": "befb8382410db6a7488511a1fe0118e7",
-			"V": {}
 		},
 		{
 			"ID": "e84207c245fb6abf8aa5bc80e8e5bbf3",
@@ -279,10 +264,66 @@
 		},
 		{
 			"ID": "8afbaa054613b09b6b26069b7966a06b",
-			"TypeName": "FreakyController.PreserveDisplacement",
+			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
+			"PrefabObjectID": "b93160154333f67967ec3f8c2cdb4c0b",
 			"ParentID": "579b8d554c6956f8e406c59f9e3eb519",
+			"V": {}
+		},
+		{
+			"ID": "dff459644f4fa61995cfe39c05a434cc",
+			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
+			"PrefabObjectID": "f68cd6ab4ed428c3b0c213ba914443ce",
+			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
+			"Name": "ConsolePrefab",
+			"V": {}
+		},
+		{
+			"ID": "7ec9dcf64051a9f0e39b7f82f1a4d0ce",
+			"TypeName": "FlaxConsole.DefaultConsole",
+			"ParentID": "dff459644f4fa61995cfe39c05a434cc",
 			"V": {
-	"controller": "c8d533b542deee441400cd8677294041"
+	"SwitchEvent": {
+		"Name": "SwitchConsole"
+	},
+	"ExecuteEvent": {
+		"Name": "ExecuteConsoleCommand"
+	},
+	"textBox": "d0fcceab4318bc8133e3638aa78e9f82",
+	"text": "697193724898d9648a5906957e617703"
+}
+		},
+		{
+			"ID": "83e7fc4c409065ac9aba199b43a25a68",
+			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
+			"PrefabObjectID": "72eaff454e4b79872258feb8cae490b9",
+			"ParentID": "dff459644f4fa61995cfe39c05a434cc",
+			"Data": {
+	"ResolutionCurve": {},
+	"DpiCurve": {}
+}
+		},
+		{
+			"ID": "8cf988924c3bdb5faa9bbe85fd4bb893",
+			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
+			"PrefabObjectID": "5904c07c4ddac258aeac76ab4b5fdb5b",
+			"ParentID": "83e7fc4c409065ac9aba199b43a25a68",
+			"Data": {}
+		},
+		{
+			"ID": "d0fcceab4318bc8133e3638aa78e9f82",
+			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
+			"PrefabObjectID": "dd1a17154413935f218ec5921c7829aa",
+			"ParentID": "8cf988924c3bdb5faa9bbe85fd4bb893",
+			"Data": {}
+		},
+		{
+			"ID": "697193724898d9648a5906957e617703",
+			"PrefabID": "d214e5ef4ed75465c572a88410452a2c",
+			"PrefabObjectID": "5d3b73d547ad3e12e2c51fb39a5cdfa3",
+			"ParentID": "8cf988924c3bdb5faa9bbe85fd4bb893",
+			"Data": {
+	"IsReadOnly": false,
+	"IsSelectable": false
 }
 		}
 	]
