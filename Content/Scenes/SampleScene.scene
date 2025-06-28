@@ -276,25 +276,6 @@
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
 			"Name": "TESTING"
-		},
-		{
-			"ID": "05ce3cf44238fa1a54d4f49913302d2d",
-			"TypeName": "Game.Test",
-			"ParentID": "3967c8a040bc28565c44c4a99388432c",
-			"V": {}
-		},
-		{
-			"ID": "c74fe9934758c0cf77aa8692b74856ca",
-			"TypeName": "FlaxConsole.ConsoleObject",
-			"ParentID": "3967c8a040bc28565c44c4a99388432c",
-			"V": {}
-		},
-		{
-			"ID": "75565f734e81a1c562e0c49e4a6888c9",
-			"TypeName": "FlaxEngine.AudioSource",
-			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
-			"Name": "AudioSource",
-			"Clip": "0ee989d64efbb13d779ae486a3f2b4b5"
 		}
 	]
 }
