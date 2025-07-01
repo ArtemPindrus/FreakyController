@@ -105,13 +105,15 @@ public class LookAround : Script
         inputResponseLocker = new();
     }
 
-    public override void OnUpdate()
-    {
+    public override void OnLateUpdate() {
         if (keepLockingCursor) {
             Screen.CursorLock = CursorLockMode.Locked;
             Screen.CursorVisible = false;
         }
+    }
 
+    public override void OnFixedUpdate()
+    {
         ApplyTargetAngles();
         centerAndRange.Update();
         ApplyTargetAngles();
