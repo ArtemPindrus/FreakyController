@@ -163,7 +163,9 @@
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "7d38057e46ef8246e091a8920d614dcc",
 			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
-			"V": {},
+			"V": {
+	"KinematicContactOffset": 0.02
+},
 			"Transform": {
 				"Translation": {
 					"X": 13.5955810546875,
@@ -177,7 +179,10 @@
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "8579fd384d3979c5c28b0cb858259c97",
 			"ParentID": "f5742355455d0fbba7f4b59e3c9f6479",
-			"V": {}
+			"V": {
+	"MaxSpeed": 300.0,
+	"Acceleration": 3000.0
+}
 		},
 		{
 			"ID": "bcbc735f4cf1961cc0f2a08e6bd410b1",
@@ -270,12 +275,6 @@
 			"PrefabObjectID": "b93160154333f67967ec3f8c2cdb4c0b",
 			"ParentID": "579b8d554c6956f8e406c59f9e3eb519",
 			"V": {}
-		},
-		{
-			"ID": "3967c8a040bc28565c44c4a99388432c",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "eb82c7c04e2a826276c0d5a4225d7f85",
-			"Name": "TESTING"
 		}
 	]
 }
