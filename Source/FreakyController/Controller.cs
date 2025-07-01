@@ -164,7 +164,7 @@ public class Controller : Script, IKinematicCharacter
 
         if (!controller.IsGrounded)
         {
-            gravityVelocity += Physics.Gravity / 100 * Time.DeltaTime;
+            gravityVelocity += Physics.Gravity * Time.DeltaTime;
         }
         else gravityVelocity = new(0, 0, 0);
     }
