@@ -109,7 +109,7 @@ public class Controller : Script, IKinematicCharacter
     public void AddWorldAcceleration(Vector3 acceleration) {
         Vector3 delta = acceleration * Time.DeltaTime;
 
-        MovementVelocity += delta; // Not right
+        LocalMovementVelocity += delta; // Not right
     }
 
     public override void OnAwake()
@@ -125,7 +125,7 @@ public class Controller : Script, IKinematicCharacter
     {
         Accelerate();
         ApplyGravity();
-        velocity = MovementVelocity + gravityVelocity;
+        velocity = LocalMovementVelocity + GravityVelocity;
 
         velocity *= Time.DeltaTime; // by default movement is frame-rate dependent, correct with delta time
 
@@ -163,7 +163,7 @@ public class Controller : Script, IKinematicCharacter
         if (movementLocker.IsLocked) inputDirection = Vector3.Zero;
 
         Vector3 targetVelocity = inputDirection * GetTargetSpeed();
-        Vector3 velocityDelta = targetVelocity - MovementVelocity;
+        Vector3 velocityDelta = targetVelocity - LocalMovementVelocity;
 
         float magnitudeDelta = Acceleration * Time.DeltaTime;
         if (velocityDelta.Length > magnitudeDelta)
@@ -171,7 +171,7 @@ public class Controller : Script, IKinematicCharacter
             velocityDelta = velocityDelta.Normalized * magnitudeDelta;
         }
 
-        MovementVelocity += velocityDelta;
+        LocalMovementVelocity += velocityDelta;
     }
 
     private void ApplyGravity()
@@ -180,9 +180,9 @@ public class Controller : Script, IKinematicCharacter
 
         if (!controller.IsGrounded)
         {
-            gravityVelocity += Physics.Gravity * Time.DeltaTime;
+            GravityVelocity += Physics.Gravity * Time.DeltaTime;
         }
-        else gravityVelocity = new(0, 0, 0);
+        else GravityVelocity = new(0, 0, 0);
     }
 
     private Vector3 GetInputDirection()
