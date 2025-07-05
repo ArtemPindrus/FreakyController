@@ -35,15 +35,18 @@ public class Controller : Script, IKinematicCharacter
     }
 
     /// <summary>
-    /// Horizontal world velocity of controller. Influenced by the player.
+    /// Horizontal local velocity of controller. Influenced by the player.
     /// </summary>
     [ShowInEditor]
     [ReadOnly]
-    public Vector3 MovementVelocity { get; private set; }
+    public Vector3 LocalMovementVelocity { get; private set; }
 
+    /// <summary>
+    /// Vertical local velocity of controller. Is automatic.
+    /// </summary>
     [ReadOnly]
     [ShowInEditor]
-    private Vector3 gravityVelocity;
+    public Vector3 GravityVelocity { get; private set; }
 
     /// <summary>
     /// Max speed of movement in cm/s.
