@@ -23,11 +23,14 @@ public class Controller : Script, IKinematicCharacter
     [ShowInEditor]
     private bool applyGravity;
 
+    /// <summary>
+    /// Local movement with 2 axis. X - velocity to the right; Y - velocity forward.
+    /// </summary>
     public Vector2 LocalMovementVelocity2D { 
         get {
-            var tran = Transform.WorldToLocal(Actor.Position + MovementVelocity);
+            var loc = LocalMovementVelocity;
 
-            return new(tran.X, tran.Z);
+            return new(loc.X, loc.Z);
         }    
     }
 
