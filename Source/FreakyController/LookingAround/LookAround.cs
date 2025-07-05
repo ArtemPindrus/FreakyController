@@ -112,7 +112,7 @@ public class LookAround : Script
         }
     }
 
-    public override void OnFixedUpdate()
+    public override void OnUpdate()
     {
         ApplyTargetAngles();
         centerAndRange.Update();

@@ -69,11 +69,17 @@ public class Controller : Script, IKinematicCharacter
         get => controller.ColliderHeight; set => controller.ColliderHeight = value;
     }
 
+    [NoSerialize]
+    public Quaternion Orientation {
+        get => controller.Orientation;
+        private set => controller.SetOrientation(value);
+    }
+
     public void Rotate(Quaternion rotation)
     {
         Quaternion newRot = Quaternion.Add(controller.TransientOrientation, rotation);
 
-        controller.SetOrientation(newRot);
+        Orientation = newRot;
     }
 
     public void Rotate(float y)
@@ -87,7 +93,7 @@ public class Controller : Script, IKinematicCharacter
     {
         Quaternion or = Quaternion.Euler(new(0, angle, 0));//Quaternion.RotationAxis(controller.Transform.Up, angle);
 
-        controller.SetOrientation(or);
+        Orientation = or;
     }
 
     public void LockRunning(object @lock, bool toLock) => runningLocker.Lock(@lock, toLock);
@@ -104,6 +110,8 @@ public class Controller : Script, IKinematicCharacter
     {
         controller = Actor.As<KinematicCharacterController>();
         controller.Controller = this;
+
+        Orientation = Actor.Orientation;
     }
 
     #region Interface
@@ -115,7 +123,7 @@ public class Controller : Script, IKinematicCharacter
 
         velocity *= Time.DeltaTime; // by default movement is frame-rate dependent, correct with delta time
 
-        orientation = Quaternion.Identity;
+        orientation = Orientation;
     }
 
     public Vector3 KinematicGroundProjection(Vector3 velocity, Vector3 gravityEulerNormalized) => 
@@ -175,7 +183,6 @@ public class Controller : Script, IKinematicCharacter
     {
         Vector3 inputDirection = new(movementRight.Value, 0, movementForward.Value);
         inputDirection = inputDirection.Normalized;
-        inputDirection = Transform.TransformDirection(inputDirection);
 
         return inputDirection;
     }
