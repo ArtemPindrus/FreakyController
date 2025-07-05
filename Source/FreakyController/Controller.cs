@@ -113,6 +113,8 @@ public class Controller : Script, IKinematicCharacter
         ApplyGravity();
         velocity = MovementVelocity + gravityVelocity;
 
+        velocity *= Time.DeltaTime; // by default movement is frame-rate dependent, correct with delta time
+
         orientation = Quaternion.Identity;
     }
 
