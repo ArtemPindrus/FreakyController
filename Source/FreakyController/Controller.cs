@@ -1,5 +1,6 @@
 ﻿using FlaxEngine;
 using KCC;
+using System.Collections.Generic;
 
 namespace FreakyController;
 
@@ -12,6 +13,7 @@ public class Controller : Script, IKinematicCharacter
     [ShowInEditor]
     private InputEvent run = new();
 
+    private List<SpeedDecrease> speedDecreases = new();
     private KinematicCharacterController controller;
     private InputAxis movementForward = new("MovementForward");
     private InputAxis movementRight = new("MovementRight");
@@ -100,6 +102,17 @@ public class Controller : Script, IKinematicCharacter
     public Quaternion Orientation {
         get => controller.Orientation;
         private set => controller.SetOrientation(value);
+    }
+
+    /// <summary>
+    /// Adds decrease of speed to controller and returns reference to its instance.
+    /// </summary>
+    /// <param name="factor"></param>
+    public SpeedDecrease AddSpeedDecrease(float factor) {
+        SpeedDecrease s = new(factor);
+        speedDecreases.Add(s);
+
+        return s;
     }
 
     public void Rotate(Quaternion rotation)
@@ -233,6 +246,19 @@ public class Controller : Script, IKinematicCharacter
             targetSpeed *= RunMultiplier;
         }
 
+        foreach (var sd in speedDecreases) {
+            if (sd.Enabled) targetSpeed *= sd.Multiplier;
+        }
+
         return targetSpeed * Time.TimeScale;
+    }
+}
+
+public class SpeedDecrease {
+    public float Multiplier { get; }
+    public bool Enabled { get; set; }
+    
+    public SpeedDecrease(float multiplier) {
+        Multiplier = multiplier;
     }
 }

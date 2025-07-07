@@ -11,11 +11,14 @@ public partial class CrouchingStateMachine
     private SinTween tween;
     private readonly Controller controller;
     private readonly Crouching crouching;
+    private readonly SpeedDecrease controllerSpeedDeacrease;
 
-    public CrouchingStateMachine(Controller controller, Crouching crouching)
-    {
+    public CrouchingStateMachine(Controller controller, Crouching crouching) {
         this.controller = controller;
         this.crouching = crouching;
+
+
+        controllerSpeedDeacrease = controller.AddSpeedDecrease(crouching.CrouchedSpeedMultiplier);
 
         tween = new(controller.Height, crouching.CrouchedHeight, crouching.CrouchDuration);
         tween.Finished += OnTweenFinished;
@@ -24,11 +27,13 @@ public partial class CrouchingStateMachine
     partial void OnRunningLock_Enter()
     {
         controller.LockRunning(runningLock, true);
+        controllerSpeedDeacrease.Enabled = true;
     }
 
     partial void OnRunningLock_Exit()
     {
         controller.LockRunning(runningLock, false);
+        controllerSpeedDeacrease.Enabled = false;
     }
 
     private void OnTweenFinished()

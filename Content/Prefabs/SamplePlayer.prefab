@@ -58,6 +58,7 @@
 	"crouchEvent": {
 		"Name": "Crouch"
 	},
+	"CrouchedSpeedMultiplier": 0.6,
 	"CrouchedMultiplier": 0.25,
 	"CrouchDuration": 0.4
 }

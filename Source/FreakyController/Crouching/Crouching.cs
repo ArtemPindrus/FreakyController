@@ -29,6 +29,10 @@ public class Crouching : Script
 
     [Serialize]
     [ShowInEditor]
+    public float CrouchedSpeedMultiplier { get; private set; }
+
+    [Serialize]
+    [ShowInEditor]
     public float CrouchedMultiplier { get; private set; }
 
     [Serialize]
