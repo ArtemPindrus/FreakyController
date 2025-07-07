@@ -29,7 +29,7 @@
 		"Name": "Run"
 	},
 	"applyGravity": true,
-	"walkingBackMultiplier": 0.85,
+	"walkingBackMultiplier": 0.8,
 	"MaxSpeed": 300.0,
 	"Acceleration": 3000.0,
 	"RunMultiplier": 1.5

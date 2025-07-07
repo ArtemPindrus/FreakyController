@@ -177,7 +177,9 @@
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "8579fd384d3979c5c28b0cb858259c97",
 			"ParentID": "f5742355455d0fbba7f4b59e3c9f6479",
-			"V": {}
+			"V": {
+	"walkingBackMultiplier": 0.8
+}
 		},
 		{
 			"ID": "bcbc735f4cf1961cc0f2a08e6bd410b1",

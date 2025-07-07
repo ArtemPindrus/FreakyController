@@ -78,10 +78,22 @@ public class Controller : Script, IKinematicCharacter
     [ShowInEditor]
     public float RunMultiplier { get; private set; }
 
+    /// <summary>
+    /// Height of the controller.
+    /// <para>
+    /// Automatically adjusts world center.
+    /// </para>
+    /// </summary>
     [NoSerialize]
-    public float Height
-    {
-        get => controller.ColliderHeight; set => controller.ColliderHeight = value;
+    public float Height {
+        get => controller.ColliderHeight;
+        set {
+            var delta = value - controller.ColliderHeight;
+            
+            controller.ColliderHeight = value;
+
+            controller.SetPosition(controller.Position + new Vector3(0, delta / 2, 0));
+        }
     }
 
     [NoSerialize]
