@@ -7,6 +7,7 @@
 		"ID": "7d38057e46ef8246e091a8920d614dcc",
 		"TypeName": "KCC.KinematicCharacterController",
 		"V": {
+	"KinematicContactOffset": 0.02,
 	"ColliderHeight": 140.0,
 	"ColliderRadius": 35.0,
 	"CollisionMask": {
@@ -28,8 +29,9 @@
 		"Name": "Run"
 	},
 	"applyGravity": true,
-	"MaxSpeed": 3.0,
-	"Acceleration": 30.0,
+	"walkingBackMultiplier": 0.85,
+	"MaxSpeed": 300.0,
+	"Acceleration": 3000.0,
 	"RunMultiplier": 1.5
 }
 	},
@@ -38,6 +40,7 @@
 		"TypeName": "FreakyController.LookAround",
 		"ParentID": "7d38057e46ef8246e091a8920d614dcc",
 		"V": {
+	"keepLockingCursor": true,
 	"neck": "6f1fcff2407d5c8d34574a935709c772",
 	"body": "8579fd384d3979c5c28b0cb858259c97",
 	"Sensitivity": 0.1,
