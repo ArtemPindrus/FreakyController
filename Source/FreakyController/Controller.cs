@@ -23,6 +23,15 @@ public class Controller : Script, IKinematicCharacter
     [ShowInEditor]
     private bool applyGravity;
 
+    [Serialize]
+    [ShowInEditor]
+    [Limit(0,1)]
+    private float walkingBackThreshold;
+
+    [Serialize]
+    [ShowInEditor]
+    private float walkingBackMultiplier;
+
     /// <summary>
     /// Local movement with 2 axis. X - velocity to the right; Y - velocity forward.
     /// </summary>
@@ -124,7 +133,9 @@ public class Controller : Script, IKinematicCharacter
     public void KinematicMoveUpdate(out Vector3 velocity, out Quaternion orientation)
     {
         Accelerate();
+        ReduceHorizontalVelocityIfMovingBackwards();
         ApplyGravity();
+
         velocity = LocalMovementVelocity + GravityVelocity;
 
         velocity *= Time.DeltaTime; // by default movement is frame-rate dependent, correct with delta time
@@ -172,6 +183,14 @@ public class Controller : Script, IKinematicCharacter
         }
 
         LocalMovementVelocity += velocityDelta;
+    }
+
+    private void ReduceHorizontalVelocityIfMovingBackwards() {
+        float dot = Vector3.Dot(Transform.TransformDirection(LocalMovementVelocity.Normalized), Transform.Forward);
+
+        if (dot < walkingBackThreshold) {
+            LocalMovementVelocity *= walkingBackMultiplier;
+        }
     }
 
     private void ApplyGravity()
