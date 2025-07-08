@@ -7,7 +7,6 @@
 		"ID": "7d38057e46ef8246e091a8920d614dcc",
 		"TypeName": "KCC.KinematicCharacterController",
 		"V": {
-	"KinematicContactOffset": 0.02,
 	"ColliderHeight": 140.0,
 	"ColliderRadius": 35.0,
 	"CollisionMask": {
