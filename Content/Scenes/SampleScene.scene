@@ -191,9 +191,7 @@
 			"PrefabID": "29906ed74d363792f574f7ae263f74bd",
 			"PrefabObjectID": "8b80d8d34d7879540093f7b0331b0417",
 			"ParentID": "f5742355455d0fbba7f4b59e3c9f6479",
-			"V": {
-	"CrouchedSpeedMultiplier": 0.8
-}
+			"V": {}
 		},
 		{
 			"ID": "031a5dd64f3357fdf25802aa472e1804",
