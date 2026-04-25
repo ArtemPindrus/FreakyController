@@ -155,7 +155,8 @@ public class Controller : Script, IKinematicCharacter
     }
 
     #region Interface
-    public void KinematicMoveUpdate(out Vector3 velocity, out Quaternion orientation)
+    /// <inheritdoc/>
+    public void KinematicMoveUpdate(out Vector3 velocity)
     {
         Accelerate();
         ReduceHorizontalVelocityIfMovingBackwards();
@@ -165,30 +166,40 @@ public class Controller : Script, IKinematicCharacter
 
         velocity *= Time.DeltaTime; // by default movement is frame-rate dependent, correct with delta time
 
-        orientation = Orientation;
+        controller.SetOrientation(Orientation);
     }
 
+    /// <inheritdoc/>
     public Vector3 KinematicGroundProjection(Vector3 velocity, Vector3 gravityEulerNormalized) => 
         controller.GroundTangent(velocity.Normalized) * velocity.Length; // TODO: learn
-
-    public bool KinematicCollisionValid(Collider other) => true;
-
-    public void KinematicCollision(RayCastHit hit) { }
-
-    public void KinematicUnstuckEvent(Collider collider, Vector3 penetrationDirection, float penetrationDistance) { }
-
-    public void KinematicGroundingEvent(GroundState groundingState, RayCastHit? hit)
-    {
+    
+    /// <inheritdoc/>
+    public bool KinematicCollisionValid(PhysicsColliderActor other) {
+        return true;
     }
 
+    /// <inheritdoc/>
+    public void KinematicCollision(ref RayCastHit hit) { }
+
+    /// <inheritdoc/>
+    public void KinematicUnstuckEvent(Collider collider, Vector3 penetrationDirection, float penetrationDistance) { }
+
+    /// <inheritdoc/>
+    public void KinematicGroundingEvent(GroundState groundingState, GroundFlag groundFlag, RayCastHit hit) { }
+
+    /// <inheritdoc/>
     public bool KinematicCanAttachToRigidBody(RigidBody rigidBody) => false; // TODO: learn
 
+    /// <inheritdoc/>
     public void KinematicAttachedRigidBodyEvent(bool attached, RigidBody rigidBody) { }
 
+    /// <inheritdoc/>
     public void KinematicAttachedRigidBodyUpdate(RigidBody rigidBody) { }
 
+    /// <inheritdoc/>
     public void KinematicRigidBodyInteraction(RigidBodyInteraction rbInteraction) { }
 
+    /// <inheritdoc/>
     public void KinematicPostUpdate() { }
     #endregion
 
